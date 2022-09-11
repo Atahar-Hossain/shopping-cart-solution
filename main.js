@@ -49,3 +49,17 @@ document.getElementById(`case-minus`).addEventListener(`click`, function () {
 	updateProductNumber(`case`, false, 59);
 });
 // add event handler end
+
+function checkOut() {
+	const totalPrice = document.getElementById(`total-price`);
+	const totalPriceNumber = parseInt(totalPrice.innerText);
+	if (totalPriceNumber > 0) {
+		window.alert(`Thank You for your purchase`);
+	} else {
+		window.alert(`Please add something in your cart list`);
+	}
+}
+
+document.getElementById(`check-out`).addEventListener(`click`, function () {
+	checkOut();
+});
